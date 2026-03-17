@@ -15,7 +15,7 @@ export default function Footer() {
           >
             LinkedIn
           </a>
-          <a href="mailto:mquarfot@gmail.com">Email</a>
+          <a href="mailto:mitch@quarfot.io">Email</a>
         </div>
       </div>
     </footer>

@@ -125,7 +125,7 @@ export default function Home() {
             subtitle="Interested in working together? Let's connect."
           />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', alignItems: 'center' }}>
-            <a href="mailto:mquarfot@gmail.com" style={{ fontSize: '1.1rem' }}>
+            <a href="mailto:mitch@quarfot.io" style={{ fontSize: '1.1rem' }}>
               mquarfot@gmail.com
             </a>
             <a
