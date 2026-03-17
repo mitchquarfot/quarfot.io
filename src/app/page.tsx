@@ -126,7 +126,7 @@ export default function Home() {
           />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', alignItems: 'center' }}>
             <a href="mailto:mitch@quarfot.io" style={{ fontSize: '1.1rem' }}>
-              mquarfot@gmail.com
+              mitch@quarfot.io
             </a>
             <a
               href="https://www.linkedin.com/in/mitchquarfot/"
