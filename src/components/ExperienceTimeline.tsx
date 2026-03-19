@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import styles from './ExperienceTimeline.module.css';
 
 interface Role {
@@ -56,7 +59,14 @@ export default function ExperienceTimeline() {
   return (
     <div className={styles.timeline}>
       {ROLES.map((role, i) => (
-        <div className={styles.item} key={i}>
+        <motion.div
+          className={styles.item}
+          key={i}
+          initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.5, delay: i * 0.1 }}
+        >
           <div className={styles.dot} />
           <div className={styles.content}>
             <p className={styles.period}>{role.period}</p>
@@ -64,7 +74,7 @@ export default function ExperienceTimeline() {
             <p className={styles.title}>{role.title}</p>
             <p className={styles.desc}>{role.description}</p>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import styles from './SkillsGrid.module.css';
 
 interface Skill {
@@ -44,10 +47,18 @@ export default function SkillsGrid() {
   return (
     <div className={styles.grid}>
       {SKILLS.map((skill, i) => (
-        <div className={styles.card} key={i}>
+        <motion.div
+          className={styles.card}
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-30px' }}
+          transition={{ duration: 0.4, delay: i * 0.08 }}
+          whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+        >
           <h3 className={styles.title}>{skill.title}</h3>
           <p className={styles.desc}>{skill.description}</p>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

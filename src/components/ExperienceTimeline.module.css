@@ -1,6 +1,6 @@
 .timeline {
   position: relative;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
 }
 
 .timeline::before {
@@ -10,7 +10,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: #ddd;
+  background: linear-gradient(to bottom, var(--accent), var(--glass-border), transparent);
 }
 
 .item {
@@ -24,51 +24,57 @@
 
 .dot {
   position: absolute;
-  left: -2rem;
+  left: -2.5rem;
   top: 4px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: var(--accent);
-  border: 3px solid #fff;
-  box-shadow: 0 0 0 2px var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--accent), 0 0 12px var(--accent-glow);
 }
 
 .content {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 1.25rem 1.5rem;
-  transition: box-shadow 0.2s;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .content:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  transform: translateX(4px);
 }
 
 .period {
   font-size: 0.85rem;
-  color: var(--accent);
+  color: var(--accent-light);
   font-weight: 600;
   margin: 0 0 0.25rem;
+  letter-spacing: 0.02em;
 }
 
 .company {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   margin: 0 0 0.15rem;
   color: var(--text);
+  font-weight: 700;
 }
 
 .title {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--text-muted);
   margin: 0 0 0.75rem;
   font-style: italic;
 }
 
 .desc {
   font-size: 0.9rem;
-  color: #444;
-  line-height: 1.6;
+  color: var(--text-dim);
+  line-height: 1.7;
   margin: 0;
 }

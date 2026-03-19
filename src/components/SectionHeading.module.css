@@ -1,25 +1,26 @@
 .heading {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: var(--text);
   margin: 0;
+  letter-spacing: -0.01em;
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #666;
-  margin-top: 0.5rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
 }
 
 .underline {
   width: 60px;
-  height: 3px;
-  background: var(--accent);
-  margin: 1rem auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  margin: 1.25rem auto 0;
   border-radius: 2px;
 }
