@@ -51,6 +51,10 @@
   border: 3px solid var(--glass-border);
   margin-bottom: 2rem;
   animation: float 6s ease-in-out infinite;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 
 @keyframes float {
@@ -131,7 +135,15 @@
   }
 
   .headshot {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .content {
+    padding: 0 1rem;
+  }
+
+  .scrollIndicator {
+    bottom: 1rem;
   }
 }
