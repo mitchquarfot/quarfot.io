@@ -30,6 +30,11 @@ export default function Navbar() {
     setOpen(false);
   }, [pathname]);
 
+  // Standalone splash pages render without the personal-site chrome.
+  if (pathname?.startsWith('/snowflake-adtech')) {
+    return null;
+  }
+
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>

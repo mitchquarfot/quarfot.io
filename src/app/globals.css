@@ -12,6 +12,9 @@
   --glass-bg: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-border-hover: rgba(255, 255, 255, 0.15);
+  --sf-blue: #29b5e8;
+  --sf-blue-dark: #11567f;
+  --sf-blue-glow: rgba(41, 181, 232, 0.22);
   --max-width: 1200px;
   --radius: 16px;
   --radius-sm: 8px;

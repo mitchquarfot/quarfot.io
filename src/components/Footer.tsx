@@ -1,7 +1,17 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  // Standalone splash pages render without the personal-site chrome.
+  if (pathname?.startsWith('/snowflake-adtech')) {
+    return null;
+  }
+
   return (
     <footer className={styles.footer}>
       <div className={styles.gradient} />
